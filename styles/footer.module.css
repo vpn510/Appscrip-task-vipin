@@ -1,0 +1,117 @@
+.footer {
+  background: #111;
+  /* Deep black base */
+  color: #fff;
+  padding: 3rem 1.5rem 1rem;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Elegant golden overlay glow */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1), transparent 60%);
+  z-index: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  flex: 1 1 250px;
+  min-width: 220px;
+}
+
+.heading {
+  color: #ffd700;
+  /* gold */
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.text {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 0.5rem;
+}
+
+.links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.links a:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+/* Bottom bar */
+.bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #bbb;
+  position: relative;
+  z-index: 1;
+}
+
+.name {
+  color: #ffd700;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.name:hover {
+  color: #fff;
+}
+
+/* 🔸 Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section {
+    flex: 1 1 100%;
+  }
+
+  .links li {
+    display: inline-block;
+    margin: 0.3rem 0.6rem;
+  }
+
+  .bottom {
+    font-size: 0.85rem;
+  }
+}

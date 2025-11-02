@@ -1,0 +1,106 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #0d0d0d;
+  color: #f5c518;
+  padding: 15px 25px;
+  z-index: 999;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.scrolled {
+  box-shadow: 0 2px 15px rgba(245, 197, 24, 0.15);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #ffd700;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #ffffff;
+}
+
+/* Links (Desktop) */
+.links {
+  display: flex;
+  gap: 25px;
+}
+
+.links a {
+  color: #f5c518;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #ffffff;
+}
+
+/* Hamburger Button (Mobile) */
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #f5c518;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menuToggle:hover {
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menuToggle {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    padding: 20px 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    gap: 20px;
+    transition: all 0.3s ease;
+  }
+
+  .show {
+    display: flex;
+  }
+
+  .links a {
+    font-size: 1.1rem;
+    padding: 8px 0;
+  }
+}
+
+/* Extra polish for tablets and large screens */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+}
