@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "@/styles/plp.module.css";
+
+import styles from "@/styles/ProductCard.module.css"
 
 const ProductCard = ({ product }) => {
   return (
@@ -7,9 +8,9 @@ const ProductCard = ({ product }) => {
       <div className={styles.imageWrapper}>
         <img
           src={product.image}
-          style={{ width: "17vw" }}
           alt={product.title}
           className={styles.productImage}
+        y
         />
       </div>
       <div className={styles.cardBody}>
