@@ -18,7 +18,6 @@ export default function PLP() {
       const data = await res.json();
       setProducts(data);
       setFiltered(data);
-      console.log(products);
 
       // ✅ Build filters dynamically from data
       const uniqueCategories = [
